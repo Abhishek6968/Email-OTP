@@ -26,10 +26,10 @@ This is a simple OTP (One-Time Password) verification project that includes a fr
 - MongoDB set up locally or use MongoDB Atlas.
 - An email account configured with an [App Password](https://myaccount.google.com/security-checkup) for sending emails via Nodemailer.
 
-## Set up environment variables: Create a .env file in the root of the project with:
+## Add environment variables: Move .env file in the backend folder of the project and add:
 - Email_User=your-email@gmail.com
 - Email_Passkey=your-app-password
-- MONGO_URI=your-mongodb-connection-string
+
 
 
 
