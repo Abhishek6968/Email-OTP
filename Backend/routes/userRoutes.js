@@ -31,9 +31,7 @@ router.post('/sent-otp',async (req,res)=>{
 
     router.post('/validate-otp', async (req, res) => {
         const { otp } = req.body;
-        console.log(otp);
         const record = await user.findOne({ otp });
-        console.log(record);
         if (!record) {
           return res.json({ valid: false, message: 'Invalid OTP. Please try again.' });
         }

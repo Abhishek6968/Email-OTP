@@ -30,19 +30,21 @@ function OTPForm({ email, onOTPVerify }) {
 
   return (
     <div>
-      <h2>Enter OTP</h2>
       <form onSubmit={handleSubmit}>
-        <label>OTP</label>
+      <label><h2>MOCK EXIT EXAM</h2></label>
+
         <input
           type="text"
+          placeholder='Enter OTP'
           value={otp}
           onChange={(e) => setOtp(e.target.value)}
           required
           maxLength="4"
         />
         <button type="submit">Verify OTP</button>
+        {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+
       </form>
-      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
     </div>
   );
 }

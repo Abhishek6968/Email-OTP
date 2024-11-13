@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import axios from 'axios'; // For ES6 imports
 function EmailForm({ onEmailSubmit }) {
   const [email, setEmail] = useState('');
+  const [loading,setLoading]=useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const response =await axios.post('http://localhost:4000/user/sent-otp',{email})
     const data =response.data;
     console.log(response.data); 
@@ -18,9 +20,10 @@ function EmailForm({ onEmailSubmit }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>Email</label>
-      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-      <button type="submit">Submit</button>
+      <label><h2>MOCK EXIT EXAM</h2></label>
+      <input type="email" placeholder='Enter mail' value={email} onChange={(e) => setEmail(e.target.value)} required /><br/>
+      <button type="submit">Send OTP</button>
+      {loading && ( <p>Please wait while we load next page!!<br/>&#128512;🕘</p>)}
     </form>
   );
 }

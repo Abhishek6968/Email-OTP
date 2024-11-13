@@ -17,7 +17,6 @@ function App() {
 
   return (
     <>
-     <h2>MOCK EXIT EXAM</h2>
      <Routes>
      <Route path='/' element={<EmailForm onEmailSubmit={handleEmailSubmit}/>} />
 
