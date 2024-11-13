@@ -26,12 +26,11 @@ This is a simple OTP (One-Time Password) verification project that includes a fr
 - MongoDB set up locally or use MongoDB Atlas.
 - An email account configured with an [App Password](https://myaccount.google.com/security-checkup) for sending emails via Nodemailer.
 
-## Installation
+## Set up environment variables: Create a .env file in the root of the project with:
+- Email_User=your-email@gmail.com
+- Email_Passkey=your-app-password
+- MONGO_URI=your-mongodb-connection-string
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/otp-verification.git
-   cd otp-verification
 
 
 https://github.com/user-attachments/assets/62cdeb00-59ef-4d4e-aa79-b379cb167aee
